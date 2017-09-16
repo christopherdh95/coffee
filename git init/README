@@ -1,0 +1,10 @@
+nikita
+25	      ssh: ssh
+26	    .file.touch "#{scratch}/a_file"
+27	    .system.remove "#{scratch}/a_file", (err, status) ->
+…	
+89	        files.should.containEql 'a_dir.zip'
+90	        callback()
+91	    .promise()
+92	
+93	  they 'a dir', (ssh) ->
